@@ -10,5 +10,6 @@ void main() {
       },
     );
     await tester.pumpWidget(button);
+    expect(button, findsOneWidget);
   });
 }
