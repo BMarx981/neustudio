@@ -4,7 +4,11 @@ import 'package:neustudio/neustudio.dart';
 
 void main() {
   testWidgets('Press the neumorphic button', (tester) async {
-    const button = NeuStudioButton();
+    final button = NeuStudioButton(
+      onTap: () {
+        print("Hello button");
+      },
+    );
     await tester.pumpWidget(button);
   });
 }

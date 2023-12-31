@@ -18,23 +18,26 @@ class _NeuStudioButtonState extends State<NeuStudioButton> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        GestureDetector(
-          onTap: () {
-            widget.onTap;
-          },
-          child: Container(
-            decoration: const BoxDecoration(boxShadow: [
-              BoxShadow(
-                color: Colors.white,
-                offset: Offset(2, 2),
-                blurRadius: 2,
-              ),
-              BoxShadow(
-                color: Colors.grey,
-                offset: Offset(-2, -2),
-                blurRadius: 2,
-              ),
-            ]),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              widget.onTap;
+            },
+            child: Container(
+              decoration: const BoxDecoration(boxShadow: [
+                BoxShadow(
+                  color: Colors.white,
+                  offset: Offset(2, 2),
+                  blurRadius: 2,
+                ),
+                BoxShadow(
+                  color: Colors.grey,
+                  offset: Offset(-2, -2),
+                  blurRadius: 2,
+                ),
+              ]),
+              child: const Text("Title goes here."),
+            ),
           ),
         )
       ],
